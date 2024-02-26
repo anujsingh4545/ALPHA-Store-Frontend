@@ -62,7 +62,7 @@ const Navbar2Panel = () => {
           </p>
 
           {showBrand && (
-            <div className=" px-5 py-3  md:px-10 md:py-5 flex items-center flex-col justify-center ease-in-out duration-150 absolute bottom-[1] mt-4 rounded-sm shadow-xl dark:shadow-sm  dark:bg-black dark:shadow-gray-700 left-[-5px] md:left-auto md:right-0 w-[250px] md:w-[400px] bg-white">
+            <div className=" px-5 py-3  z-10 md:px-10 md:py-5 flex items-center flex-col justify-center ease-in-out duration-150 absolute bottom-[1] mt-4 rounded-sm shadow-xl dark:shadow-sm  dark:bg-black dark:shadow-gray-700 left-[-5px] md:left-auto md:right-0 w-[250px] md:w-[400px] bg-white">
               <section className="flex items-center w-full justify-between border-b-[0.1px] pb-2">
                 <p className="font-semibold text-[1rem] md:text-[1.1rem] tracking-widest">SHOP BY BRAND</p>
                 <p className=" text-[0.8rem] md:text-[0.9rem] text-blue-500 font-semibold cursor-pointer ">See All</p>
