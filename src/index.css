@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.nav1 {
+  @apply border-b-[1.5px] border-transparent border-spacing-5 hover:border-blue-500 cursor-pointer w-fit ease-in-out duration-200;
+}
+
+.nav2 {
+  @apply w-full  text-[0.8rem] hover:bg-slate-100 dark:hover:bg-slate-900 dark:hover:text-white cursor-pointer px-2 py-2;
+}
+
+.navside1 {
+  @apply text-[0.95rem] w-full hover:bg-white border-l-2 hover:border-blue-500 border-transparent ease-in-out duration-150 pl-8 py-2 cursor-pointer tracking-widest;
+}
+
+.footer1 {
+  @apply cursor-pointer w-fit dark:hover:border-blue-500 hover:border-slate-200 border-b-2 ease-in-out duration-150 border-transparent;
+}
+
+.footer2 {
+  @apply w-12 hover:opacity-80 transform ease-in-out duration-150 rounded-full;
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 240 5.9% 10%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 5.9% 10%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground text-[0.9rem];
+  }
+
+  html {
+    font-family: "Open Sans", system-ui, sans-serif;
+    @apply tracking-wide;
+  }
+}
