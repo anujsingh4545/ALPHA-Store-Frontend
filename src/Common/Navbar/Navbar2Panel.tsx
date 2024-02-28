@@ -1,6 +1,7 @@
 import {useEffect, useState} from "react";
 import {ChevronDown, Menu, ShoppingCart} from "lucide-react";
 import NavbarSidePanel from "./NavbarSidePanel";
+import {Link} from "react-router-dom";
 
 const Navbar2Panel = () => {
   const [showBrand, setShowBrand] = useState(false);
@@ -39,22 +40,32 @@ const Navbar2Panel = () => {
       {/*  */}
       <section className="w-full md:w-fit justify-between md:justify-center flex items-center gap-5 order-1 ">
         <Menu size={28} className="cursor-pointer hidden md:flex " onClick={() => setShowSidePanel(!showSidePanel)} />
-        <p className="font-anta font-semibold text-[1.2rem] text-center w-full">ALPHA Store</p>
+
+        <Link to="/">
+          <p className="font-anta font-semibold text-[1.2rem] text-center w-full">ALPHA Store</p>
+        </Link>
       </section>
 
       <NavbarSidePanel togglepanel={toggleSidePanel} showpanel={showSidePanel} />
 
       <section className="w-full md:w-fit justify-between md:hidden flex items-center gap-5 order-1 ">
         <Menu size={22} className="cursor-pointer " onClick={() => setShowSidePanel(!showSidePanel)} />
-        <ShoppingCart size={22} className="cursor-pointer " />
+        <div className=" relative cursor-pointer ">
+          <ShoppingCart size={22} className="cursor-pointer " />
+          <p className=" animate-bounce absolute bottom-3 left-4   rounded-full bg-blue-500 h-4  w-4 text-[0.6rem] flex items-center justify-center text-white ">1</p>
+        </div>
       </section>
 
       <section className="order-last md:order-2 w-full md:w-[30%] lg:w-[40%] ">
         <input type="text" className="w-full rounded-md border-[0.1px] text-[0.9rem] px-4 py-3 bg-transparent outline-none " placeholder="Search Products" />
       </section>
 
-      <section className="flex items-center justify-between flex-row gap-6 md:gap-4 order-3">
-        <ShoppingCart size={22} className="hidden md:flex mr-5 cursor-pointer " />
+      <section className=" hidden md:flex items-center justify-between flex-row gap-6 md:gap-4 order-3">
+        <div className=" relative cursor-pointer ">
+          <ShoppingCart size={22} className=" mr-5 cursor-pointer  " />
+
+          <p className=" animate-bounce absolute bottom-3 right-3   rounded-full bg-blue-500 h-4  w-4 text-[0.6rem] flex items-center justify-center text-white ">1</p>
+        </div>
 
         <div className="relative" id="brandSection">
           <p className="text-[0.9rem] flex items-end justify-center cursor-pointer " onClick={() => setShowBrand(!showBrand)}>
@@ -91,8 +102,17 @@ const Navbar2Panel = () => {
 
           {showWelcome && (
             <div className="px-2 py-2 flex  flex-col justify-center ease-in-out duration-150 absolute bottom-[1] mt-4 rounded-sm shadow-xl dark:shadow-sm  dark:bg-black dark:shadow-gray-700 right-0 w-[120px] bg-white   ">
-              <p className=" nav2 ">Login</p>
-              <p className=" nav2">Sign Up</p>
+              <Link to="/login">
+                <p className=" nav2 " onClick={() => setShowWelcome(false)}>
+                  Login
+                </p>
+              </Link>
+
+              <Link to="/register">
+                <p className=" nav2" onClick={() => setShowWelcome(false)}>
+                  Register
+                </p>
+              </Link>
             </div>
           )}
         </div>

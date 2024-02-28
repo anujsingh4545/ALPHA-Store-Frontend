@@ -28,7 +28,7 @@ const Footer1 = () => {
           <div className=" w-full  mt-4 border-[0.1px] flex items-center justify-center ">
             <input type="text" className=" w-full outline-none  dark:text-black  text-[0.8rem] p-3 " placeholder="Please enter your email" />
 
-            <button className=" px-5  h-full hover:bg-blue-500 hover:text-white ease-in-out duration-150  border-l-[0.1px] ">Subscribe</button>
+            <button className=" px-5  h-full text-white bg-blue-500 hover:bg-blue-600 ease-in-out duration-150  border-l-[0.1px] ">Subscribe</button>
           </div>
         </section>
       </div>
@@ -38,16 +38,16 @@ const Footer1 = () => {
 
         <section className=" w-full flex items-center justify-center  mt-5 gap-4  ">
           <a href="www.facebook.com" target="_blank">
-            <img src="./social-icons/facebook.svg" alt="facebook" className="footer2" />
+            <img src="/social-icons/facebook.svg" alt="facebook" className="footer2" />
           </a>
           <a href="www.instagram.com" target="_blank">
-            <img src="./social-icons/instagram.svg" alt="facebook" className=" footer2 " />
+            <img src="/social-icons/instagram.svg" alt=" instagram" className=" footer2 " />
           </a>
           <a href="www.pinterest.com" target="_blank">
-            <img src="./social-icons/pinterest.svg" alt="facebook" className=" footer2 " />
+            <img src="/social-icons/pinterest.svg" alt="pinterest" className=" footer2 " />
           </a>
           <a href="www.twitter.com" target="_blank">
-            <img src="./social-icons/twitter.svg" alt="facebook" className=" footer2 " />
+            <img src="/social-icons/twitter.svg" alt="twitter" className=" footer2 " />
           </a>
         </section>
       </div>
