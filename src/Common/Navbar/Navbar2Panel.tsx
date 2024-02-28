@@ -93,7 +93,9 @@ const Navbar2Panel = () => {
           )}
         </div>
 
-        <p className="text-[0.9rem] cursor-pointer ">Shop</p>
+        <Link to="/shop">
+          <p className="text-[0.9rem] cursor-pointer ">Shop</p>
+        </Link>
 
         <div className=" relative " id="welcomeSection">
           <p className="text-[0.9rem] flex items-end justify-center cursor-pointer " onClick={() => setShowWelcome(!showWelcome)}>
