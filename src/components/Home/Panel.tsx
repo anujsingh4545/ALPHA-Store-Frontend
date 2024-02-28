@@ -8,7 +8,7 @@ const Panel = () => {
         <img src="/banners/banner-5-min.jpg" alt="" />
       </section>
 
-      <section className=" flex-1  mx-10 md:mx-0 z-0  w-full items-center justify-center ">
+      <section className=" flex-1  mx-10 md:mx-0 z-0   items-center justify-center">
         <Carousel className=" flex items-center justify-center w-fit z-0 ">
           <CarouselContent className=" z-0 ">
             <CarouselItem>

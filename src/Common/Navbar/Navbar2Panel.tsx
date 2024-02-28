@@ -60,8 +60,8 @@ const Navbar2Panel = () => {
         <input type="text" className="w-full rounded-md border-[0.1px] text-[0.9rem] px-4 py-3 bg-transparent outline-none " placeholder="Search Products" />
       </section>
 
-      <section className=" hidden md:flex items-center justify-between flex-row gap-6 md:gap-4 order-3">
-        <div className=" relative cursor-pointer ">
+      <section className="flex items-center justify-between flex-row gap-6 md:gap-4 order-3">
+        <div className=" hidden md:flex relative cursor-pointer ">
           <ShoppingCart size={22} className=" mr-5 cursor-pointer  " />
 
           <p className=" animate-bounce absolute bottom-3 right-3   rounded-full bg-blue-500 h-4  w-4 text-[0.6rem] flex items-center justify-center text-white ">1</p>
