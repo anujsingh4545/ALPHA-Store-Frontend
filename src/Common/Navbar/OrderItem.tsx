@@ -2,7 +2,7 @@ import {Trash2} from "lucide-react";
 
 const OrderItem = () => {
   return (
-    <div className=" flex items-center flex-col justify-center px-3 md:px-5 py-3 border-[0.1px] ">
+    <div className=" flex items-center flex-col justify-center px-3 md:px-5 py-3 border-b-[0.1px] dark:border-gray-300 ">
       <section className=" flex items-center justify-between w-full  ">
         <div className=" flex  items-center justify-center gap-3 md:gap-5">
           <img src="/pwa.png" alt="" className=" size-16 rounded-md " />
