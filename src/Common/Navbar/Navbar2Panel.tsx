@@ -2,11 +2,13 @@ import {useEffect, useState} from "react";
 import {ChevronDown, Menu, ShoppingCart} from "lucide-react";
 import NavbarSidePanel from "./NavbarSidePanel";
 import {Link} from "react-router-dom";
+import OrderPanel from "./OrderPanel";
 
 const Navbar2Panel = () => {
   const [showBrand, setShowBrand] = useState(false);
   const [showWelcome, setShowWelcome] = useState(false);
   const [showSidePanel, setShowSidePanel] = useState(false);
+  const [orderPanel, setOrderPanel] = useState(false);
 
   useEffect(() => {
     const handleClickOutside = (event: any) => {
@@ -35,13 +37,17 @@ const Navbar2Panel = () => {
     setShowSidePanel(false);
   };
 
+  const tooggleOrderPanel = () => {
+    setOrderPanel(false);
+  };
+
   return (
     <main className="border-b-[0.1px] px-5 md:px-20 flex justify-between items-center flex-col md:flex-row py-4 gap-y-3">
       {/*  */}
       <section className="w-full md:w-fit justify-between md:justify-center flex items-center gap-5 order-1 ">
         <Menu size={28} className="cursor-pointer hidden md:flex " onClick={() => setShowSidePanel(!showSidePanel)} />
 
-        <Link to="/">
+        <Link to="/" className="w-full ">
           <p className="font-anta font-semibold text-[1.2rem] text-center w-full">ALPHA Store</p>
         </Link>
       </section>
@@ -50,20 +56,23 @@ const Navbar2Panel = () => {
 
       <section className="w-full md:w-fit justify-between md:hidden flex items-center gap-5 order-1 ">
         <Menu size={22} className="cursor-pointer " onClick={() => setShowSidePanel(!showSidePanel)} />
-        <div className=" relative cursor-pointer ">
+
+        {/*  */}
+        <div className=" relative cursor-pointer" onClick={() => setOrderPanel(!orderPanel)}>
           <ShoppingCart size={22} className="cursor-pointer " />
           <p className=" animate-bounce absolute bottom-3 left-4   rounded-full bg-blue-500 h-4  w-4 text-[0.6rem] flex items-center justify-center text-white ">1</p>
         </div>
       </section>
+
+      <OrderPanel toggleOrder={tooggleOrderPanel} showorder={orderPanel} />
 
       <section className="order-last md:order-2 w-full md:w-[30%] lg:w-[40%] ">
         <input type="text" className="w-full rounded-md border-[0.1px] text-[0.9rem] px-4 py-3 bg-transparent outline-none " placeholder="Search Products" />
       </section>
 
       <section className="flex items-center justify-between flex-row gap-6 md:gap-4 order-3">
-        <div className=" hidden md:flex relative cursor-pointer ">
+        <div className=" hidden md:flex relative cursor-pointer " onClick={() => setOrderPanel(!orderPanel)}>
           <ShoppingCart size={22} className=" mr-5 cursor-pointer  " />
-
           <p className=" animate-bounce absolute bottom-3 right-3   rounded-full bg-blue-500 h-4  w-4 text-[0.6rem] flex items-center justify-center text-white ">1</p>
         </div>
 
@@ -81,7 +90,7 @@ const Navbar2Panel = () => {
 
               <section className="grid grid-cols-1 md:grid-cols-2 w-full text-left mt-2 md:mt-5 gap-y-3 text-[0.9rem] transform">
                 <p className="nav1">Converse</p>
-                <p className="nav1">Calkin Klein</p>
+                <p className="nav1">Calvin Klein</p>
                 <p className="nav1">Nike</p>
                 <p className="nav1">Apple</p>
                 <p className="nav1">Gucci</p>

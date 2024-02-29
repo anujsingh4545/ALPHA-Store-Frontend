@@ -2,7 +2,7 @@ const Footer1 = () => {
   return (
     <main className="  py-5 md:py-8 px-5 md:px-20  flex flex-col items-center w-full  border-t-[0.1px] ">
       <div className=" grid grid-cols-1 md:grid-cols-3 w-full  gap-5 ">
-        <section className=" flex flex-col items-start justify-start  border-r-[0.1px] w-full py-5  ">
+        <section className=" flex flex-col items-start justify-start  border-r-[0.1px] w-full py-2 md:py-5  ">
           <p className=" font-semibold text-[1rem] "> CUSTOMER SERVICE</p>
 
           <div className=" flex flex-col text-gray-500  gap-y-2 mt-4 text-[0.95rem] ">
@@ -11,7 +11,7 @@ const Footer1 = () => {
             <p className=" footer1 ">Shipping</p>
           </div>
         </section>
-        <section className=" flex flex-col items-start justify-center  border-r-[0.1px] w-full  py-5 ">
+        <section className=" flex flex-col items-start justify-center  border-r-[0.1px] w-full py-2 md:py-5 ">
           <p className=" font-semibold text-[1rem] "> LINKS</p>
 
           <div className=" flex flex-col text-gray-500  gap-y-2 mt-4 text-[0.95rem] ">
@@ -20,7 +20,7 @@ const Footer1 = () => {
             <p className=" footer1 ">Shipping</p>
           </div>
         </section>
-        <section className=" flex flex-col items-start justify-start   w-full  py-5 ">
+        <section className=" flex flex-col items-start justify-start   w-full  py-2 md:py-5 ">
           <p className=" font-semibold text-[1rem] "> NEWSLETTER</p>
 
           <p className=" text-[0.95rem] mt-2  text-gray-500"> Sign Up for Our Newsletter</p>
