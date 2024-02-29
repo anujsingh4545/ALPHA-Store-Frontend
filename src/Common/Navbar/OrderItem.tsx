@@ -12,7 +12,7 @@ const OrderItem = () => {
         <Trash2 className=" font-normal text-slate-600 cursor-pointer hover:text-slate-800 " size={20} />
       </section>
 
-      <section className=" w-full flex flex-col  gap-y-1 pt-2  ">
+      <section className=" w-full flex flex-col  gap-y-1 pt-2 dark:text-black  ">
         <div className=" flex items-center justify-between ">
           <p>Price</p>
           <p>$30</p>
