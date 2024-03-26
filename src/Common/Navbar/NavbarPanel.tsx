@@ -10,7 +10,7 @@ const NavbarPanel = () => {
   };
 
   return (
-    <div className=" flex items-center justify-between px-3 md:px-0 md:justify-evenly  text-[0.95rem] bg-[#24292d] dark:bg-white py-2 ">
+    <div className=" flex items-center justify-between px-3 md:px-20  text-[0.95rem] bg-[#24292d] dark:bg-white py-2 ">
       <p className="  hidden  md:flex items-center justify-center  text-white font-medium dark:text-black ">
         <Car size={18} className=" mr-2  " /> Free Shipping
       </p>

@@ -2,7 +2,6 @@ import {X} from "lucide-react";
 import OrderItem from "./OrderItem";
 
 const OrderPanel = ({toggleOrder, showorder}: any) => {
-  console.log(showorder);
   return (
     <>
       <section className={` z-40 fixed top-0  md:w-[450px] w-[320px] bg-gray-100 h-[100dvh] shadow-sm ${showorder ? "right-0" : "right-[-500px] "} ease-in-out duration-300  `}>
