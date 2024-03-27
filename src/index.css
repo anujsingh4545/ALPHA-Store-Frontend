@@ -82,7 +82,7 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground text-[0.9rem] tracking-wider;
+    @apply bg-background text-foreground text-[0.9rem] tracking-wider max-w-[90rem] min-w-[375px] mx-auto;
   }
 
   html {
