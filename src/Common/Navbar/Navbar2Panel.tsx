@@ -84,6 +84,7 @@ const Navbar2Panel = () => {
         </div>
       </section>
 
+      
       <OrderPanel toggleOrder={tooggleOrderPanel} showorder={orderPanel} />
 
       <section className="order-last md:order-2 w-full md:w-[30%] lg:w-[40%] ">
@@ -140,7 +141,7 @@ const Navbar2Panel = () => {
               <div className="px-2 py-2 flex  flex-col justify-center ease-in-out duration-150 absolute bottom-[1] mt-4 rounded-sm shadow-xl dark:shadow-sm  dark:bg-black dark:shadow-gray-700 right-0 w-[120px] bg-white ">
                 {user.user ? (
                   <>
-                    <Link to="/dashboard">
+                    <Link to="/dashboard/account">
                       <p className=" nav2 " onClick={() => setShowWelcome(false)}>
                         Dashboard
                       </p>

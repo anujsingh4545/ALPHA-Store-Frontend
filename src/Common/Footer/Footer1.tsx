@@ -1,3 +1,5 @@
+import {Link} from "react-router-dom";
+
 const Footer1 = () => {
   return (
     <main className="  py-5 md:py-8 px-5 md:px-20  flex flex-col items-center w-full  border-t-[0.1px] ">
@@ -6,8 +8,12 @@ const Footer1 = () => {
           <p className=" font-semibold text-[1rem] "> CUSTOMER SERVICE</p>
 
           <div className=" flex flex-col text-gray-500  gap-y-2 mt-4 text-[0.95rem] ">
-            <p className=" footer1 ">Contact Us</p>
-            <p className=" footer1 ">Sell With Us</p>
+            <Link to="/contact">
+              <p className=" footer1 ">Contact Us</p>
+            </Link>
+            <Link to="sell-with-us">
+              <p className=" footer1 ">Sell With Us</p>
+            </Link>
             <p className=" footer1 ">Shipping</p>
           </div>
         </section>
@@ -15,8 +21,12 @@ const Footer1 = () => {
           <p className=" font-semibold text-[1rem] "> LINKS</p>
 
           <div className=" flex flex-col text-gray-500  gap-y-2 mt-4 text-[0.95rem] ">
-            <p className=" footer1 ">Contact Us</p>
-            <p className=" footer1 ">Sell With Us</p>
+            <Link to="/contact">
+              <p className=" footer1 ">Contact Us</p>
+            </Link>
+            <Link to="sell-with-us">
+              <p className=" footer1 ">Sell With Us</p>
+            </Link>
             <p className=" footer1 ">Shipping</p>
           </div>
         </section>

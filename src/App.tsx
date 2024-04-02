@@ -31,6 +31,14 @@ import EditBrand from "./components/Brands/EditBrand";
 import AddBrand from "./components/Brands/AddBrand";
 import AddAddress from "./components/Address/AddAddress";
 import EditAddress from "./components/Address/EditAddress";
+import ProductView from "./components/Shop/ProductView";
+import Contact from "./pages/Contact";
+import Sell from "./pages/Sell";
+import OrderSuccess from "./pages/OrderSuccess";
+import OrderDetail from "./components/Orders/OrderDetail";
+import AddProductSeller from "./components/Products/AddProductSeller";
+import EditProductSeller from "./components/Products/EditProductSeller";
+import ScrollToTop from "./Common/Session/Scrolltotop";
 
 function App() {
   const [user, setuser] = useRecoilState(UserAtom);
@@ -61,20 +69,29 @@ function App() {
   return (
     <ThemeProvider defaultTheme="light" storageKey="vite-ui-theme">
       <Toaster />
+      <ScrollToTop />
       <NavbarPanel />
       <Navbar2Panel />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/shop" element={<Shop />} />
+        <Route path="/shop/:name" element={<ProductView />} />
         <Route path="/shop/brands" element={<Brand />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/sell-with-us" element={<Sell />} />
+        <Route path="/order/success/:id" element={<OrderSuccess />} />
+        <Route path="/order/:id" element={<OrderDetail />} />
+
         <Route path="/dashboard" element={<Dashboard />}>
-          <Route path="/dashboard" element={<AccountDetails />} />
+          <Route path="/dashboard/account" element={<AccountDetails />} />
           <Route path="/dashboard/address" element={<Address />} />
           <Route path="/dashboard/address/add" element={<AddAddress />} />
           <Route path="/dashboard/address/edit/:name" element={<EditAddress />} />
           <Route path="/dashboard/products" element={<Products />} />
+          <Route path="/dashboard/products/add" element={<AddProductSeller />} />
+          <Route path="/dashboard/products/edit/:name" element={<EditProductSeller />} />
           <Route path="/dashboard/categories" element={<Categories />} />
           <Route path="/dashboard/categories/edit/:name" element={<EditCategory />} />
           <Route path="/dashboard/categories/add" element={<AddCategory />} />
@@ -84,6 +101,7 @@ function App() {
           <Route path="/dashboard/merchants" element={<Merchants />} />
           <Route path="/dashboard/requests" element={<Requests />} />
           <Route path="/dashboard/orders" element={<Orders />} />
+
           <Route path="/dashboard/wishlist" element={<Wishlist />} />
         </Route>
 
